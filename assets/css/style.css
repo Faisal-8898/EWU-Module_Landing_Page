@@ -58,10 +58,10 @@ body{
 .navbar a::after {
     content: '';
     width: 0;
-    height: 2px; /* Adjust the underline thickness as needed */
-    background-color: #1C4370; /* Adjust the underline color as needed */
+    height: 2px; 
+    background-color: #1C4370; 
     position: absolute;
-    bottom: -3px; /* Adjust the distance from the link text to the underline as needed */
+    bottom: -3px; 
     left: 0;
     transition: width 0.3s;
   }
@@ -86,7 +86,7 @@ body{
 
 
 .menu-btn {
-    display: none; /* Hide the menu button initially for larger screens */
+    display: none;
     background: none;
     border: none;
     font-size: 18px;
@@ -95,10 +95,10 @@ body{
   }
 
 
-/* Media query for smaller screens */
+/* Media query  */
 @media screen and (max-width: 990px) {
   .menu-btn {
-    display: block; /* Show the menu button for smaller screens */
+    display: block; 
   }
 
   .navbar {
@@ -118,7 +118,7 @@ body{
     margin: 10px 0;
   }
 
-  /* ... Your existing styles for navbar links and underline effect ... */
+
 
   /* Show the navbar when the menu button is clicked */
   .navbar.show {

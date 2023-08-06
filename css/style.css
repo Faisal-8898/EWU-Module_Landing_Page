@@ -115,24 +115,11 @@ a:hover,a.active{
 }
 }
 
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins" ,sans-serif;
-    list-style: none;
-    text-decoration: none;
-}
 
-body{
-    min-height: 100vh;
-    background: url('/assets/images/background/bg_Proctors_office.jpeg') no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-/* 
+
+/*
 .navDiv{
-    /* position: fixed;
+     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -147,11 +134,7 @@ body{
     width: 100%;
 }
 
-/* .logo {
-    width: 15%; 
-    padding-top: 6.5%;
-    background: url('/assets/logo/East-west-university-Logo.svg') no-repeat;
-  } */
+
 
   /* .navbar a {
     font-size: 18px;

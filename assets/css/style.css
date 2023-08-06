@@ -1,10 +1,127 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
 
-*{
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: url('/assets/images/background/bg_Proctors_office.jpeg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+label.logo {
+  background: url('/assets/logo/East-west-university-Logo.svg') no-repeat;
+  padding: 0 100px;
+  width: 15%; 
+  padding-top: 6.5%;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.739);
+  height: 80px;
+  width: 100%;
+}
+
+nav ul {
+  float: right;
+  margin-right: 50px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  font-size: 17px;
+  color: #1C4370;
+  font-weight: 500;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+
+  transition: 0.5s;
+}
+
+.checkBtn {
+  color: #1c4370;;
+  font-size: 30px;
+  line-height: 80px;
+  float: right;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 956px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkBtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #1c4370;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    top: 80px;
+    text-align: center;
+    left: -100%;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 300;
+}
+a:hover,a.active{
+  background: none;
+  color: #1c4370;
+  
+}
+#check:checked ~ ul{
+    left: 0;
+}
+}
+
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins" ,sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
 
 body{
@@ -13,9 +130,9 @@ body{
     background-size: cover;
     background-position: center;
 }
-
+/* 
 .navDiv{
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -24,14 +141,17 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 100; 
+    background-color: rgba(255, 255, 255, 0.51);
+    height: 80px;
+    width: 100%;
 }
 
-.logo {
+/* .logo {
     width: 15%; 
     padding-top: 6.5%;
     background: url('/assets/logo/East-west-university-Logo.svg') no-repeat;
-  }
+  } */
 
   /* .navbar a {
     font-size: 18px;
@@ -43,7 +163,7 @@ body{
   } */
 
 /* Add the styles for the navbar links and their underline effect */
-.navbar a {
+/* .navbar a {
     position: relative;
     font-size: 18px;
     color: #1C4370;
@@ -96,13 +216,13 @@ body{
 
 
 /* Media query  */
-@media screen and (max-width: 990px) {
+/* @media screen and (max-width: 990px) {
   .menu-btn {
     display: block; 
   }
 
   .navbar {
-    display: none; /* Hide the navbar by default for smaller screens */
+    display: none; 
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.8);
@@ -112,16 +232,16 @@ body{
     left: 0;
     width: 100%;
     z-index: 99;
-  }
+  } 
 
   .navbar a {
     margin: 10px 0;
   }
-
-
+ 
+  */
 
   /* Show the navbar when the menu button is clicked */
-  .navbar.show {
+  /* .navbar.show {
     display: flex;
   }
 }
@@ -135,4 +255,4 @@ body{
         width: 25%; 
         padding-top: 17.5%;
       }
-}
+}   */

@@ -14,6 +14,9 @@ body {
   background: url('/assets/images/background/bg_Proctors_office.jpeg') no-repeat;
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 label.logo {
@@ -23,10 +26,14 @@ label.logo {
   padding-top: 6.5%;
 }
 
+
 nav {
   background-color: rgba(255, 255, 255, 0.739);
   height: 80px;
   width: 100%;
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure navbar is on top of other content */
 }
 
 nav ul {
@@ -116,6 +123,124 @@ a:hover,a.active{
 }
 
 
+footer{
+  position: relative;
+  width: 100%;
+  background: #1c4370;
+  min-height: 150px;
+  padding: 20px 50px;
+  display: flex;
+  text-align: center;
+}
+
+#footerLogo{
+  height: 80px;
+}
+
+.footerContents{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit,minmax(150px,auto));
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  gap:3.5rem;
+  }
+
+
+.footerContent {
+  text-align: left; /* Adjust alignment of individual content */
+}
+
+.footerContent p {
+  margin: 0; /* Remove default margin on paragraphs */
+}
+
+.contact-info {
+  margin-top: 10px;
+}
+
+.phone, .email {
+  display: block;
+  margin: 5px 0;
+}
+
+.phone i, .email i {
+  margin-right: 5px;
+}
+
+.icon a {
+  margin-right: 10px; /* Add space between social media icons */
+}
+
+
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('/assets/images/image.png');
+  background-size: 1000px 100px;
+}
+
+footer .wave#wave1{
+  z-index: 999;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave01 3s linear infinite;
+}
+
+footer .wave#wave2{
+  z-index: 998;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave02 4s linear infinite;
+}
+
+footer .wave#wave3{
+  z-index: 999;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave01 3s linear infinite;
+}
+
+footer .wave#wave4{
+  z-index: 998;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave02 3s linear infinite;
+}
+
+
+@keyframes animateWave01 {
+  0%
+  {
+    background-position-x: 1000px;
+  }
+  100%
+  {
+    background-position-x: 0px;
+  }
+  
+}
+
+@keyframes animateWave02 {
+  0%
+  {
+    background-position-x: 0;
+  }
+  100%
+  {
+    background-position-x: 1000px;
+  }
+  
+}
+
+
+
+
+
+
 
 /*
 .navDiv{
@@ -136,26 +261,6 @@ a:hover,a.active{
 
 
 
-  /* .navbar a {
-    font-size: 18px;
-    color: #1C4370;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 40px;
-    padding-right: 15px;
-  } */
-
-/* Add the styles for the navbar links and their underline effect */
-/* .navbar a {
-    position: relative;
-    font-size: 18px;
-    color: #1C4370;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 40px;
-    padding-right: 15px;
-    position: relative; 
-}
 
 .navbar a::before,
 .navbar a::after {
@@ -186,56 +291,4 @@ a:hover,a.active{
     width: 90%;
 }
 
-
-
-.menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 18px;
-    color: #1C4370;
-    cursor: pointer;
-  }
-
-
-/* Media query  */
-/* @media screen and (max-width: 990px) {
-  .menu-btn {
-    display: block; 
-  }
-
-  .navbar {
-    display: none; 
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    z-index: 99;
-  } 
-
-  .navbar a {
-    margin: 10px 0;
-  }
- 
-  */
-
-  /* Show the navbar when the menu button is clicked */
-  /* .navbar.show {
-    display: flex;
-  }
-}
-
-
-@media screen and (max-width: 500px) {
-    .menu-btn {
-        font-size: 1em;
-      }
-    .logo {
-        width: 25%; 
-        padding-top: 17.5%;
-      }
-}   */
+*/

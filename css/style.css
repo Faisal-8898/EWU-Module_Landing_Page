@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
 
 * {
   padding: 0;
@@ -29,11 +29,19 @@ label.logo {
 
 nav {
   background-color: rgba(255, 255, 255, 0.739);
-  height: 80px;
+  height: 100px;
   width: 100%;
   position: fixed; /* Fixed positioning */
   top: 0; /* Stick to the top of the viewport */
   z-index: 1000; /* Ensure navbar is on top of other content */
+}
+
+#navLogo{
+  height: 70px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-left: 20px;
+  
 }
 
 nav ul {
@@ -43,7 +51,7 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  line-height: 80px;
+  line-height: 100px;
   margin: 0 15px;
 }
 
@@ -123,6 +131,7 @@ a:hover,a.active{
 }
 
 
+
 footer{
   position: relative;
   width: 100%;
@@ -135,14 +144,15 @@ footer{
 
 #footerLogo{
   height: 80px;
+  margin-bottom: 15px;
 }
 
 .footerContents{
   display: grid;
   width: 100%;
   grid-template-columns: repeat(auto-fit,minmax(150px,auto));
-  color: rgb(0, 0, 0);
-  font-weight: 400;
+  color: rgb(255, 255, 255);
+  font-weight: 200;
   gap:3.5rem;
   }
 

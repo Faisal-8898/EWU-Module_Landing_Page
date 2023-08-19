@@ -73,7 +73,7 @@ a:hover {
 .checkBtn {
   color: #1c4370;;
   font-size: 30px;
-  line-height: 80px;
+  line-height: 100px;
   float: right;
   margin-right: 40px;
   cursor: pointer;
@@ -105,7 +105,7 @@ a:hover {
     background: #1c4370;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
-    top: 80px;
+    top: 100px;
     text-align: center;
     left: -100%;
     transition: all 0.5s;
@@ -252,57 +252,3 @@ footer .wave#wave4{
 
 
 
-
-
-
-
-/*
-.navDiv{
-     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1% 3%;
-    background-color: rgba(255, 255, 255, 0.75);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100; 
-    background-color: rgba(255, 255, 255, 0.51);
-    height: 80px;
-    width: 100%;
-}
-
-
-
-
-.navbar a::before,
-.navbar a::after {
-    content: '';
-    width: 0;
-    height: 2px; 
-    background-color: #1C4370; 
-    position: absolute;
-    bottom: -3px; 
-    left: 0;
-    transition: width 0.3s;
-  }
-
-.navbar a::before {
-    left: 0;
-}
-
-.navbar a::after {
-    right: 0;
-}
-
-.navbar a:hover::before,
-.navbar a:hover::after {
-    width: 80%;
-}
-.navbar a.noticeBoard:hover::before,
-.noticeBoard :hover::after {
-    width: 90%;
-}
-
-*/

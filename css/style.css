@@ -11,12 +11,17 @@
 body {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
+  display:block;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.bg{ 
+  display: block;
+  min-height: 100vh;
   background: url('/assets/images/background/bg_Proctors_office.jpeg') no-repeat;
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
 }
 
 label.logo {
@@ -64,10 +69,39 @@ nav ul li a {
   text-transform: uppercase;
 }
 
+ul li a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  overflow: hidden; /* Hide overflow to contain the animated underline */
+}
+
+ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Position the underline just below the text */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1C4370; /* Set the initial underline color */
+  transition: width 0.3s; /* Apply transition to the width property */
+}
+
+ul li a:hover::after, a.active{
+  width: 100%; /* Expand the width to create the underline effect */
+}
+
+
+ul li a.active::after {
+  width: 100%; /* For the "Home" link with permanent underline */
+}
+
 a.active,
 a:hover {
-
-  transition: 0.5s;
+  /* color: #1c4370; 
+  border-bottom: 2px solid #1c4370; 
+  transition: 0.5s; */
+  width: 100%;
 }
 
 .checkBtn {
@@ -103,7 +137,7 @@ a:hover {
     width: 100%;
     height: 100vh;
     background: #1c4370;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.146);
     backdrop-filter: blur(5px);
     top: 100px;
     text-align: center;
@@ -156,18 +190,26 @@ footer{
   gap:9.5rem;
   }
 
-#fooetLink{
+#footerLink{
     font-size: large;
-    padding-right: 25px;
+    padding-right: 90px;
+}
+
+#footerLink a {
+  color: white; /* Change link color to white */
+  text-decoration: none; /* Remove underline from links */
+}
+
+#logoDesciption{
+  padding-left: 19px;
+  margin-top: -32px;
+  z-index: 999;
 }
 
 .footerContent {
   text-align: left; /* Adjust alignment of individual content */
 }
 
-.footerContent p {
-  margin: 0; /* Remove default margin on paragraphs */
-}
 
 .contact-info {
   margin-top: 10px;
@@ -180,6 +222,10 @@ footer{
 
 .phone i, .email i {
   margin-right: 5px;
+}
+
+.fa-facebook, .fa-twitter, .fa-google-plus-g{
+  font-size: 30px;
 }
 
 .icon a {
@@ -198,28 +244,28 @@ footer .wave {
 }
 
 footer .wave#wave1{
-  z-index: 999;
+  z-index: 995;
   opacity: 1;
   bottom: 0;
-  animation: animateWave01 3s linear infinite;
+  animation: animateWave01 4s linear infinite;
 }
 
 footer .wave#wave2{
-  z-index: 998;
+  z-index: 994;
   opacity: 0.5;
   bottom: 10px;
   animation: animateWave02 4s linear infinite;
 }
 
 footer .wave#wave3{
-  z-index: 999;
+  z-index: 995;
   opacity: 0.2;
   bottom: 15px;
   animation: animateWave01 3s linear infinite;
 }
 
 footer .wave#wave4{
-  z-index: 998;
+  z-index: 994;
   opacity: 0.7;
   bottom: 20px;
   animation: animateWave02 3s linear infinite;

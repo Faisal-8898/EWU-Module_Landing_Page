@@ -14,20 +14,29 @@
 
 <body>
   <header class="header">
-    <nav>
+    <nav >
       <img id="navLogo" src="/assets/logo/East-west-university-Logo.svg" alt="" srcset="">
+
+      
       <input type="checkbox" id="check">
       <label for="check" class="checkBtn">
         <i class="fas fa-bars"></i>
       </label>
       <a href="index.html" class="logo"></a>
-      <ul>
-        <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Feedback</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+
+      <div class="nav-elem-container">
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Contact</a></li>
+          
+        </ul>
+        <div class="login-btn-container">
+          <button class="login-btn">LOG IN</button>
+        </div>
+      </div>
 
     </nav>
   </header>
@@ -39,12 +48,11 @@
   </main>
 
   <footer>
-    <div>
+    <div id="primary-footer">
       <section class="footerContents">
         <div class="footerContent" id="logoDesciption">
           <img id="footerLogo" src="./assets/logo/image (2).png" alt="" srcset="">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-            rem aperiam ducimus impedit vitae ad!sdfjlskfjdsdlfj</p>
+          <p>A/2, Jahurul Islam Avenue Jahurul Islam City, Aftabnagar Dhaka-1212, Bangladesh</p>
         </div>
 
         <div class="footerContent" id="footerLink">
@@ -55,7 +63,7 @@
         </div>
 
         <div class="footerContent">
-          <p>A/2, Jahurul Islam Avenue Jahurul Islam City, Aftabnagar Dhaka-1212, Bangladesh</p>
+          
           <div class="contact-info">
             <span class="phone"><i class="fas fa-phone"></i> Phone: (123) 456-7890</span>
             <span class="email"><i class="fas fa-envelope"></i> Email: info@example.com</span>
@@ -80,8 +88,13 @@
         <div class="wave" id="wave4"></div>
       </div>
     </div>
+    <div id="secondary-footer">
+      <p>This website is for research and development purpose of East West University, managed by the Department of CSE</p>
+    </div>
 
+    
   </footer>
+  
 </body>
 
 </html>

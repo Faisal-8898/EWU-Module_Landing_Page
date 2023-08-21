@@ -41,6 +41,14 @@ nav {
   z-index: 1000; /* Ensure navbar is on top of other content */
 }
 
+.nav-elem-container{
+  display: flex;
+  float: right;
+  align-items: center;
+  margin-right: 50px;
+}
+
+
 #navLogo{
   height: 70px;
   margin-top: 10px;
@@ -49,12 +57,7 @@ nav {
   
 }
 
-nav ul {
-  float: right;
-  margin-right: 50px;
-}
-
-nav ul li {
+.nav-elem-container ul li {
   display: inline-block;
   line-height: 100px;
   margin: 0 15px;
@@ -104,6 +107,22 @@ a:hover {
   width: 100%;
 }
 
+.login-btn {
+  padding: 15px 25px;
+  margin-left: 20px;
+  background-color: #1C4370;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #16375A;
+}
+
 .checkBtn {
   color: #1c4370;;
   font-size: 30px;
@@ -118,19 +137,39 @@ a:hover {
   display: none;
 }
 
-@media (max-width: 956px) {
-  label.logo {
-    font-size: 30px;
-    padding-left: 50px;
-  }
+/* Mobile devices */
+@media (max-width: 480px) {
+  
   nav ul li a {
     font-size: 16px;
   }
-}
+  .login-btn-container{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    
+  }
+  .login-btn {
+    padding: 10px 20px;
+    margin-left: 20px;
+    background-color: #1C4370;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
-@media (max-width: 858px) {
   .checkBtn {
     display: block;
+    margin-right: 20px;
+  }
+  .nav-elem-container{
+    display: flex;
+    float: right;
+    align-items: center;
+    margin-right: 10px;
   }
   ul {
     position: fixed;
@@ -144,55 +183,131 @@ a:hover {
     left: -100%;
     transition: all 0.5s;
   }
-  nav ul li {
+  .nav-elem-container ul li {
     display: block;
     margin: 50px;
     line-height: 30px;
   }
-  nav ul li a {
+  .nav-elem-container ul li a {
     font-size: 20px;
     color: #ffffff;
     font-weight: 300;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #1c4370;
+  
+  }
+   #check:checked ~ .nav-elem-container ul{
+    left: 0;
+  }
+
+  .footerContents{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    gap:4.5rem;
+    }
+
 }
-a:hover,a.active{
-  background: none;
-  color: #1c4370;
+/* iPads, Tablets, small screens */
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .login-btn-container{
+    display: flex;
+    align-items: center;
+    height: 100px;
+  }
+  .checkBtn {
+    display: block;
+    margin-right: 20px;
+  }
+  .nav-elem-container{
+    display: flex;
+    float: right;
+    align-items: center;
+    margin-right: 30px;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #1c4370;
+    background-color: rgba(255, 255, 255, 0.146);
+    backdrop-filter: blur(5px);
+    top: 100px;
+    text-align: center;
+    left: -100%;
+    transition: all 0.5s;
+  }
+  .nav-elem-container ul li {
+    display: block;
+    margin: 50px;
+    line-height: 30px;
+  }
+  .nav-elem-container ul li a {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 300;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #1c4370;
+  
+  }
+   #check:checked ~ .nav-elem-container ul{
+    left: 0;
+  }
+
+
+  .footerContents{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    gap:2.5rem;
+    }
+}
+
+@media (min-width: 1024px){
+  .footerContents{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit,minmax(121px,auto));
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    gap:5.5rem;
+    }
   
 }
-#check:checked ~ ul{
-    left: 0;
-}
-}
-
-
 
 footer{
   position: relative;
   width: 100%;
   background: #1c4370;
   min-height: 150px;
+}
+
+
+#primary-footer{
   padding: 20px 50px;
-  /* display: flex; */
   text-align: center;
 }
 
 #footerLogo{
+  margin-top: 10px;
   height: 80px;
   margin-bottom: 15px;
 }
 
-.footerContents{
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(auto-fit,minmax(121px,auto));
-  color: rgb(255, 255, 255);
-  font-weight: 200;
-  gap:9.5rem;
-  }
 
 #footerLink{
     font-size: large;
-    padding-right: 90px;
+    padding-right: 30px;
 }
 
 #footerLink a {
@@ -201,9 +316,12 @@ footer{
 }
 
 #logoDesciption{
-  padding-left: 19px;
   margin-top: -32px;
   z-index: 999;
+}
+#logoDesciption p{
+  width: 75%;
+  
 }
 
 .footerContent {
@@ -296,5 +414,14 @@ footer .wave#wave4{
   
 }
 
-
+#secondary-footer{
+  position: relative;
+  width: 100%;
+  background: #192f59;
+  min-height: 50px;
+  padding: 20px 50px;
+  
+  text-align: center;
+  color: #ffffff;
+}
 
